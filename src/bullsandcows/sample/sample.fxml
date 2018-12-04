@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bullsandcows.sample.Controller">
+    <top>
+        <HBox prefHeight="25.0" prefWidth="607.0" BorderPane.alignment="CENTER">
+            <children>
+
+                <ImageView fitHeight="25.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                <Spinner fx:id="n1Spinner" initialValue="1" max="9" min="0" prefHeight="25.0" prefWidth="76.0" />
+                <Spinner fx:id="n2Spinner" initialValue="2" max="9" min="0" minWidth="50" prefHeight="25.0" prefWidth="76.0" />
+                <Spinner fx:id="n3Spinner" initialValue="3" max="9" min="0" minWidth="50" prefHeight="25.0" prefWidth="75.0" />
+                <Spinner fx:id="n4Spinner" initialValue="4" max="9" min="0" minWidth="50" prefHeight="25.0" prefWidth="75.0" />
+                <Button contentDisplay="TOP" minWidth="50" mnemonicParsing="false" onAction="#dogo" prefHeight="25.0" prefWidth="148.0" text="GO" textFill="#1b1919">
+               <font>
+                  <Font name="Book Antiqua Bold" size="12.0" />
+               </font></Button>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="resultTable" prefHeight="485.0" prefWidth="162.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Attempt">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nr" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Spin 1">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="n1" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Spin 2">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="n2" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Spin 3">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="n3" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Spin 4">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="n4" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="COWS">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="cows" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="BULLS">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="bulls" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
